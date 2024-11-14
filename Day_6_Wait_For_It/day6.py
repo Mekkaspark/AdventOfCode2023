@@ -25,16 +25,16 @@ def calculate_max_distance2(time, target):
          min = i
          break;
 
-    for i in range(time, -1, -1):
-        d = i * (time-i)
-        #print (f"Hold {i}: Distance= {d} bigger {target}")
-        if d > target:
-         max = i
-         break;
+    #for i in range(time, -1, -1):
+    #    d = i * (time-i)
+    #    if d > target:
+    #     max = i
+    #     break;
 
-    print (f"Min {min}, Count = {time-min*2 + 1}")
-    print (f"Min {min}, Max {max}.  Count = {max-min + 1}")
-    return max - min + 1
+    count = time - min * 2 + 1
+    print (f"Min {min}, Count = {count}")
+    #print (f"Min {min}, Max {max}.  Count = {max-min + 1}")
+    return count
 
 def part1(puzzle_input):
     total = 1
